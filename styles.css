@@ -27,8 +27,9 @@
     --font-size-label: 13px;
     --font-size-tagline: 11px;
 
-    --primary: "Outfit", sans-serif;
+    --primary: "Lora", serif;
     --secondary: "Courier Prime", monospace;
+    --default: "Geist", sans-serif;
 }
 
 body {
@@ -36,12 +37,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--eclipse-1);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 h1 {
     font-family: var(--primary);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: var(--font-size-heading1);
     line-height: 125%;
     display: flex;
@@ -75,10 +80,10 @@ h4 {
 }
 
 h5 {
-    font-family: var(--primary);
+    font-family: var(--default);
     font-style: normal;
     font-weight: 500;
-    font-size: var(--font-size-heading5);
+    font-size: var(--font-size-heading6);
     line-height: 110%;
     display: flex;
     align-items: center;
@@ -111,6 +116,7 @@ h5 {
 
 .subtitle {
     font-style: normal;
+    font-family: var(--default);
     font-weight: 400;
     font-size: var(--font-size-heading6);
     line-height: 150%;
@@ -236,7 +242,7 @@ body.modal-open {
 
 #quote-text {
     font-family: var(--primary);
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     font-size: var(--font-size-displayLarge);
     line-height: 130%;
@@ -290,6 +296,7 @@ body.modal-open {
     font: 400 var(--font-size-caption) var(--primary);
     color: var(--eclipse-8);
     font-weight: 400;
+    font-family: var(--default);
     margin-top: 80px;
 
     -moz-user-select: none;
@@ -304,6 +311,7 @@ body.modal-open {
 
 .image-button {
     padding: 8px 16px;
+    font-family: var(--default);
     font-size: var(--font-size-caption);
     font-weight: 500;
     background-color: var(--eclipse-11);
@@ -329,6 +337,35 @@ body.modal-open {
     color: var(--eclipse-0);
 }
 
+.philosophies-button {
+    padding: 8px 16px;
+    font-family: var(--default);
+    font-size: var(--font-size-caption);
+    font-weight: 600;
+    background-color: var(--eclipse-0);
+    color: var(--eclipse-11);
+    border: 1px solid var(--eclipse-2);
+    border-radius: 8px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    width: fit-content;
+    box-shadow: 0px 2px 0px var(--eclipse-3);
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.philosophies-button:hover {
+    box-shadow: 0px 4px 0px var(--eclipse-3);
+}
+
 .modal-message {
     margin-top: 1rem;
     font-style: italic;
@@ -343,6 +380,7 @@ body.modal-open {
 
 .subtext {
     font-size: var(--font-size-caption);
+    font-family: var(--default);
     color: var(--eclipse-8);
     padding: 0;
     margin: 0;

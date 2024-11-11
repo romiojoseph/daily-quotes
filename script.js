@@ -150,7 +150,7 @@ downloadButton.addEventListener('click', () => {
     img.onload = () => {
         ctx.drawImage(img, padding, padding, 50, 43.41);
 
-        ctx.font = `400 ${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-size-displayMedium')) * (width / 500)}px ${getComputedStyle(document.documentElement).getPropertyValue('--primary').replace(/['"]+/g, '')}`;
+        ctx.font = `600 ${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-size-displayMedium')) * (width / 500)}px ${getComputedStyle(document.documentElement).getPropertyValue('--primary').replace(/['"]+/g, '')}`;
         ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--eclipse-11');
         ctx.textAlign = 'left';
         const quoteTextHeight = wrapText(ctx, quoteText.textContent, padding, padding * 3 + 30, width - padding * 2, parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-size-displayMedium')) * 1.3 * (width / 500));
